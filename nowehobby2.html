@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Hobby - Joga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+                margin: 0;
+                padding: 0;}
+            .obrazek_joga 
+                background-image: url ('https:https://images.pexels.com/photos/268134/pexels-photo-268134.jpeg');
+                /* Link do obrazka */
+                background-size: cover;
+                /* Obrazek pokrywa całe tło */
+                background-position: center;
+                /* Obrazek wyśrodkowany */
+                background-repeat: no-repeat;
+                /* Obrazek się nie powtarza */
+
+            header {
+                background-color: #1e1f1e;
+                color: white;
+                text-align: center;
+                padding: 1em;
+            }
+
+            /* Styl kart menu */
+            nav {
+                display: flex;
+                justify-content: center;
+                margin: 2em 0;
+                gap: 20px;
+            }
+
+            .card {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+                max-width: 400px;
+                cursor: pointer;
+                opacity: 0.5;
+                /* Karty półprzezroczyste w stanie początkowym */
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+                opacity: 1;
+                /* Karty stają się w pełni widoczne po najechaniu */
+            }
+
+            /* Ukrycie innych kart podczas hover */
+            .card1:hover~.card2,
+            .card2:hover~.card3,
+            .card2:hover~.card1 {
+                opacity: 0.5;
+                /* Nieaktywnym kartom pozostawiamy półprzezroczystość */
+            }
+
+            /* Styl kart nawigacyjnych - linki */
+            .card a {
+                text-decoration: none;
+                color: #4CAF50;
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 5px;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            /* Ustawienie przycisków na max 400px */
+            .card a {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            section {
+                margin: 2em auto;
+                max-width: 800px;
+                padding: 1em;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            footer {
+                text-align: center;
+                padding: 1em;
+                background-color: #4CAF50;
+                color: white;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            /* Media queries małe ekrany */
+            @media screen and (max-width: 600px) {
+                header h1 {
+                    font-size: 1.5em;
+                }
+
+                section h2 {
+                    font-size: 1.2em;
+                }
+
+                body {
+                    font-size: 14px;
+                }
+
+                .card {
+                    max-width: 100%;
+                    margin: 10px;
+                }
+            }
+
+            header,
+            footer {
+                background-color: #4CAF50;
+            }
+
+            @media (max-width:600px) {
+
+                header,
+                footer {
+                    background-color: rgb(8, 175, 231);
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Moje Hobby - Joga</h1>
+    </header>
+
+    <!-- Sekcja nawigacyjna w formie kart -->
+    <nav>
+        <div class="card card1">
+            <h3>Dlaczego joga?</h3>
+            <a href="#dlaczego-joga">Dowiedz się więcej</a>
+        </div>
+        <div class="card card2">
+            <h3>Moje ulubione ćwiczenia</h3>
+            <a href="#moje-cwiczenia">Zobacz więcej</a>
+        </div>
+        <div class="card card3">
+            <h3>Więcej informacji</h3>
+            <a href="#wiecej-informacji">Czytaj dalej</a>
+        </div>
+    </nav>
+
+    <section id="dlaczego-joga">
+        <h2>Dlaczego wybrałam jogę?</h2>
+        <p>Joga to nie tylko sposób na utrzymanie ciała w dobrej kondycji, ale również forma medytacji i relaksu. Pomaga
+            mi w odnalezieniu równowagi i spokoju w codziennym życiu.</p>
+        <div class="obrazek_joga"></div>
+        </div>
+    </section>
+
+    <section id="moje-cwiczenia">
+        <h2>Moje ulubione ćwiczenia jogi</h2>
+        <ul>
+            <li>Vrksasana</li>
+            <li>Padmasana</li>
+            <li>Trikonasana</li>
+        </ul>
+    </section>
+
+    <section id="wiecej-informacji">
+        <h2>Więcej informacji</h2>
+        <p>Aby dowiedzieć się więcej o mojej pasji do jogi i przeczytać szczegółowy opis, odwiedź <a href=""
+                target="_blank">tę stronę</a>.</p>
+    </section>
+
+    <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
+    <footer>
+        <p>&copy; 2024 Moje Hobby - Joga</p>
+    </footer>
+</body>
+
+</html>
